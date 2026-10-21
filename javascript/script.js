@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { el: 'nombre', err: 'error-nombre', vacio: 'Escribe tu nombre completo.' },
       { el: 'email', err: 'error-email', vacio: 'Escribe tu correo electronico.', invalido: 'Revisa que el correo tenga el formato: nombre@dominio.com' },
       { el: 'telefono', err: 'error-telefono', vacio: 'Escribe tu numero de telefono.', invalido: 'El telefono solo admite numeros, espacios y los signos + - ( ).' },
-      { el: 'mensaje', err: 'error-mensaje', vacio: 'Escribe tu mensaje.' }
+      { el: 'mensaje', err: 'error-mensaje', vacio: 'Escribe tu mensaje.' },
+      { el: 'consentimiento', err: 'error-consentimiento', vacio: 'Debes aceptar los Terminos y Condiciones y el Aviso de Privacidad.', check: true }
     ];
 
     function mostrarMensaje(texto, tipo) {
@@ -90,6 +91,19 @@ document.addEventListener('DOMContentLoaded', function () {
         var campo = document.getElementById(c.el);
         var span = document.getElementById(c.err);
         if (!campo) return;
+
+        /* Casilla de consentimiento: se valida marcada, no por texto */
+        if (c.check) {
+          if (!campo.checked) {
+            marcarError(campo, span, c.vacio);
+            if (!primerError) primerError = campo;
+          } else {
+            campo.classList.remove('error');
+            if (span) span.textContent = '';
+          }
+          return;
+        }
+
         var valor = campo.value.trim();
 
         if (valor === '') {

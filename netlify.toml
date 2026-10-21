@@ -27,6 +27,11 @@
   status = 301
 
 [[redirects]]
+  from = "/terminos"
+  to = "/terminos.html"
+  status = 301
+
+[[redirects]]
   from = "/gracias"
   to = "/gracias.html"
   status = 301

@@ -19,3 +19,7 @@ yarn-error.log*
 # Logs y temporales
 *.log
 *.tmp
+
+# Documentación interna de despliegue (no publicar)
+DESPLIEGUE.md
+despliegue.md

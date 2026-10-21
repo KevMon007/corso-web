@@ -773,6 +773,47 @@ ul { list-style: none; }
   text-decoration: underline;
 }
 
+/* Casilla de consentimiento (Terminos y Aviso de Privacidad) */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.form-check input[type="checkbox"] {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin: 0.2rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--secondary);
+  cursor: pointer;
+}
+
+.form-check input[type="checkbox"]:focus {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.form-check input[type="checkbox"].error {
+  outline: 2px solid #e53935;
+  outline-offset: 2px;
+}
+
+.form-group .form-check label {
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-check label a {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
 /* Campo trampa anti-bot (invisible para las personas) */
 .hidden-field {
   position: absolute;
@@ -894,6 +935,55 @@ ul { list-style: none; }
   border-bottom: 1px solid var(--gray-light);
 }
 
+/* Tabla de contenidos de los Terminos y Condiciones */
+.legal-toc {
+  background: var(--bg);
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0 2rem;
+}
+
+.aviso-legal .legal-toc-titulo {
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.legal-toc ol {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.legal-toc li {
+  margin-bottom: 0.4rem;
+  break-inside: avoid;
+}
+
+.legal-toc a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.legal-toc a:hover {
+  text-decoration: underline;
+}
+
+/* Bloque de contacto al final del documento legal */
+.legal-contacto {
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius);
+}
+
+.aviso-legal .legal-contacto h3 {
+  margin-top: 0;
+}
+
 .datos-contacto {
   background: var(--white);
   border-radius: var(--radius);
@@ -1010,6 +1100,19 @@ ul { list-style: none; }
   color: var(--accent);
 }
 
+/* Links legales agrupados en el pie de pagina */
+.footer-legal {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.footer-legal span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* TABLET */
 @media (min-width: 768px) {
   .hero h1 { font-size: 2.5rem; }
@@ -1026,6 +1129,7 @@ ul { list-style: none; }
   .conozca-card .media { width: 42%; flex-shrink: 0; align-self: flex-start; }
   .conozca-card .media-video { width: 42%; }
   .conozca-body { flex: 1; justify-content: center; padding: 2rem; }
+  .legal-toc ol { columns: 2; column-gap: 2rem; }
 }
 
 /* DESKTOP */
