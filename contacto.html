@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Consultoria Sanitaria CORSO</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon-512.png">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">CORSO <span>| Consultoria Sanitaria</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contacto</h2>
+        <p>Estamos aqui para atenderte</p>
+      </div>
+
+      <div class="contacto-grid">
+        <div class="formulario">
+          <h3>Envianos un mensaje</h3>
+          <form id="contactForm" name="contacto" method="POST" action="gracias.html"
+                data-netlify="true" netlify-honeypot="bot-field" data-privacy="privacidad" novalidate>
+            <input type="hidden" name="form-name" value="contacto">
+            <p class="hidden-field">
+              <label>Deja este campo vacio <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+
+            <div class="form-mensaje" id="formMensaje" role="alert" hidden></div>
+
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+              <span class="field-error" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electronico</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email">
+              <span class="field-error" id="error-email"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Telefono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Tu telefono" autocomplete="tel">
+              <span class="field-error" id="error-telefono"></span>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+              <span class="field-error" id="error-mensaje"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar Mensaje</button>
+            <p class="form-nota">Al enviar tu mensaje aceptas nuestro <a href="privacidad.html">Aviso de Privacidad</a>.</p>
+          </form>
+        </div>
+
+        <div class="datos-contacto">
+          <h3>Informacion de Contacto</h3>
+
+          <div class="dato-item">
+            <div class="dato-icono">&#9873;</div>
+            <div class="dato-texto">
+              <h4>Direccion Fiscal</h4>
+              <p>Calle 5 de Mayo, Tecamac, Edo. Mex, CP 55748</p>
+            </div>
+          </div>
+
+          <div class="dato-item">
+            <div class="dato-icono">&#9742;</div>
+            <div class="dato-texto">
+              <h4>Telefonos</h4>
+              <p>5652767256</p>
+              <p>5515427865</p>
+              <p>5527489175</p>
+            </div>
+          </div>
+
+          <div class="dato-item">
+            <div class="dato-icono">&#9993;</div>
+            <div class="dato-texto">
+              <h4>Correo Electronico</h4>
+              <p>regulacionsanitariacorso@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand-plate brand-plate-sm">
+            <img src="img/logo.jpg" alt="Consultoria Sanitaria CORSO" width="900" height="1084" loading="lazy">
+          </div>
+          <p>Consultoria sanitaria a nivel nacional reconocida por la integridad etica y compromiso humano.</p>
+        </div>
+        <div class="footer-contact">
+          <p><strong>Contacto:</strong></p>
+          <p>5652767256 / 5515427865</p>
+          <p>regulacionsanitariacorso@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Consultoria Sanitaria CORSO. Todos los derechos reservados.</p>
+        <p><a href="privacidad.html">Aviso de Privacidad</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>

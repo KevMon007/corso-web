@@ -1,0 +1,3 @@
+# Archivos que NO deben subirse al hosting.
+# El master del logo pesa 1.3 MB y no lo usa el sitio.
+img/logo-original.jpg

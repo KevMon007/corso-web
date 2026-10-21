@@ -1,0 +1,32 @@
+# Configuracion de despliegue para Netlify
+# Sitio estatico: no hay paso de build, solo se publica la raiz del proyecto.
+# Puedes desplegar arrastrando la carpeta en https://app.netlify.com/drop
+# (en ese caso Netlify ignora este archivo) o conectando un repositorio de Git.
+
+[build]
+  publish = "."
+  command = ""
+
+# Cabeceras de seguridad basicas
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# El formulario de contacto se procesa con Netlify Forms (atributos data-netlify
+# en contacto.html). Los envios se ven en el panel de Netlify, en la seccion
+# "Forms", y se pueden reenviar a un correo desde "Form notifications".
+
+# Rutas amigables sin extension
+[[redirects]]
+  from = "/privacidad"
+  to = "/privacidad.html"
+  status = 301
+
+[[redirects]]
+  from = "/gracias"
+  to = "/gracias.html"
+  status = 301

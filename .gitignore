@@ -1,0 +1,21 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Node (por si se anaden herramientas)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Netlify local
+.netlify/
+
+# Logs y temporales
+*.log
+*.tmp
